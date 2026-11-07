@@ -2,7 +2,7 @@
 
 A file manager for your servers.
 
-Pick a saved site, double-click a file, edit it in VS Code, and every save goes straight back to the server.
+Pick a saved site, double-click a file, edit it in VS Code or the built-in editor, and every save goes straight back to the server.
 
 ## Download
 
