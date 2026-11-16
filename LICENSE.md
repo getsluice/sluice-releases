@@ -48,4 +48,6 @@ This licence is governed by the laws of India, and the courts of India decide an
 
 This licence goes with Sluice's terms of use, which you agree to by downloading or using Sluice. The full terms are in [TERMS.md](TERMS.md) and at [getsluice.vercel.app/terms](https://getsluice.vercel.app/terms). The [privacy policy](PRIVACY.md) explains what the app and the website collect.
 
+If this licence and the terms of use ever differ, the terms of use apply.
+
 For questions about this licence, email [meeeet.dev@gmail.com](mailto:meeeet.dev@gmail.com).
