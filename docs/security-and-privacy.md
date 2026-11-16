@@ -46,6 +46,8 @@ When a certificate can't be verified, Sluice says **This server's certificate co
 
 It also shows who the certificate was issued to and by, the dates it's valid, and its SHA-256 fingerprint, so you can check it. Then choose **Trust and connect**, or **Cancel**.
 
+![The question when a certificate can't be verified: who it was issued to and by, its dates and its SHA-256 fingerprint, with Cancel and Trust and connect](images/certificate-question.png)
+
 Sluice remembers a certificate you trust for that server and port. If the server later sends a different certificate that can't be verified either, Sluice says **This server's certificate has changed**, and shows the fingerprints of the old certificate and the new one. As with a changed host key, **Cancel** is the default, Return always cancels, and trusting the new one takes a click on **Trust the new certificate**.
 
 ## Plain FTP
@@ -57,6 +59,8 @@ Before such a site sends anything, Sluice asks:
 > **This connection isn't encrypted**
 >
 > Your password and files can be read on the way. Connect anyway?
+
+![The question before a plain FTP connection: This connection isn't encrypted, with Cancel and Connect](images/plain-ftp-question.png)
 
 For a saved site, Sluice asks the first time it connects, and asks again if you change the site's host or port. With **Connect without saving**, it asks every time.
 

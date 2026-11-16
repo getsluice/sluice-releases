@@ -4,9 +4,14 @@
 
 <p align="center">A file manager for your servers.</p>
 
-Pick a saved site, double-click a file, edit it in VS Code or the built-in editor, and every save goes straight back to the server.
+Pick a saved site, double-click a file, edit it in the built-in editor or VS Code, and every save goes straight back to the server.
 
 Sluice connects over SFTP, SCP, FTP and FTPS. WebDAV and S3 are to come.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/main-window-dark.png">
+  <img src="docs/images/main-window-light.png" alt="Sluice's window: a shop's web folder on its server, with style.css open in the built-in editor and a backup downloading">
+</picture>
 
 ## Download
 

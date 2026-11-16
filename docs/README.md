@@ -1,6 +1,6 @@
 # Sluice user guide
 
-Sluice is a free file manager for your servers. It connects over SFTP, SCP, FTP and FTPS, and opens files in VS Code or its built-in editor, with every save uploaded straight back to the server.
+Sluice is a free file manager for your servers. It connects over SFTP, SCP, FTP and FTPS, and opens files in its built-in editor or VS Code, with every save uploaded straight back to the server.
 
 This guide is for Sluice 1.3. Sluice is currently for macOS.
 

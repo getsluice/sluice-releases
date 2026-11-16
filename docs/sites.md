@@ -16,6 +16,8 @@ The right side is the selected site's form. Change anything in it, then choose *
 
 ## The form, field by field
 
+![The site form for an SFTP site that logs in with a key file](images/site-form-sftp.png)
+
 ### Name
 
 What the site is called in the list and on its tab. If you leave it empty, Sluice names it `user@host`.
@@ -35,6 +37,8 @@ How Sluice talks to the server.
 You don't always need to choose SCP yourself. If an SFTP site's server turns out to have no SFTP, Sluice carries on over SCP on the same connection, so you don't log in a second time. The status bar then says "SCP (no SFTP here)", and the site stays an SFTP site.
 
 ### Encryption (FTP only)
+
+![The site form for an FTP site, with Encryption set to TLS, explicit (recommended)](images/site-form-ftp.png)
 
 - **TLS, explicit (recommended)** is the default. The connection starts on the FTP port and is then encrypted. Sluice requires the encryption: if the server won't encrypt the connection, Sluice doesn't connect, and it never quietly drops to plain FTP.
 - **TLS, implicit** is for servers that encrypt from the very start. Its usual port is 990.

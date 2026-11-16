@@ -14,6 +14,8 @@ Open Settings with ⌘, (Sluice › Settings…). It has four panes: **General**
 
 ## Editing
 
+![Settings, Editing: Open text files in Built-in editor, and apps chosen for other file types](images/settings-editing.png)
+
 | Setting | What it does | Default |
 | --- | --- | --- |
 | Open text files in | **Built-in editor**, **Default text editor**, **VS Code**, or an app you choose with **Other App…**. | Built-in editor |

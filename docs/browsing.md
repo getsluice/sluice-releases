@@ -13,6 +13,8 @@ From top to bottom, Sluice's window has:
 - the **bottom panel**, with your transfers, the files you're editing, and any terminals or searches you've put there;
 - the **status bar**.
 
+![Sluice's window: the folder tree on the left, the file list on the right, and the transfer panel at the bottom](images/main-window-light.png)
+
 The window's title says where you are, such as `user@host: /var/www`.
 
 ## Tabs

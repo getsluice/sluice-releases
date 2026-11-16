@@ -72,6 +72,8 @@ If you're editing the file in VS Code, Compare opens VS Code's side-by-side view
 
 Otherwise, Compare opens Sluice's Compare window, with **Server's version** on the left and **Your version** on the right. Its buttons are **Overwrite server**, **Keep server version** and **Cancel**. If you close the window without choosing, Sluice asks its question again.
 
+![The Compare window: the server's version on the left, yours on the right, with Overwrite server, Keep server version and Cancel](images/conflict-compare.png)
+
 Compare is offered when the server still has the file, and either the file is open in VS Code or your version is text.
 
 ### When the file has gone from the server
@@ -89,6 +91,8 @@ How editing ends depends on the editor.
 You can choose **Stop** in the Editing tab for any file. When nothing is left to upload, Sluice removes its copy.
 
 ### The Editing tab
+
+![The Editing tab of the bottom panel, listing style.css open in the built-in editor](images/main-window-editing.png)
 
 The Editing tab of the bottom panel lists every file you're editing, with its site, its editor and its status:
 

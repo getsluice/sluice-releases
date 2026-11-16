@@ -35,6 +35,8 @@ Tick **Apply to all** to give the same answer for the rest of that upload or dow
 
 ## The transfer panel
 
+![The transfer panel: finished uploads, a download and a delete, two uploads under way and one waiting](images/transfers.png)
+
 Transfers show in the **Transfers** tab of the bottom panel. Each row shows the server, the file's name (hover over it for its full path), a progress bar and a status, such as:
 
 | Status | What it means |
