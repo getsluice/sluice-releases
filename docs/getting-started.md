@@ -64,7 +64,7 @@ Once the server answers, the Sites tab turns into the server's tab. It shows the
 
 ## When a new version comes out
 
-Sluice checks for a new version when it starts and once a day after that. When there is one, the Sites tab shows a banner such as "Sluice 1.4.0 is available." **Download** opens the release page in your browser, and **Not now** hides the banner until you next open Sluice. **About Sluice**, in the Sluice menu, shows your version and says when a newer one is available.
+Sluice checks for a new version when it starts and once a day after that. When there is one, the Sites tab shows a banner such as "Sluice 1.5.0 is available." **Download** opens the release page in your browser, and **Not now** hides the banner until you next open Sluice. **About Sluice**, in the Sluice menu, shows your version and says when a newer one is available.
 
 To update, download the new `Sluice.dmg` and drag Sluice to the Applications folder, replacing the old one. Your sites, settings and saved passwords are kept, because Sluice stores them outside the app. Then confirm the new version with **Open Anyway**, as above, and choose **Always Allow** if macOS asks about the keychain again.
 
