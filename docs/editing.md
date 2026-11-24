@@ -37,6 +37,7 @@ Save the file in your editor as usual. Sluice sees the save and uploads the file
 - Saves go ahead of every other transfer, so a big upload never holds up a save.
 - Saves of one file go one after another, so the server always ends up with your newest version.
 - If the connection is down, the save waits and goes once Sluice has reconnected.
+- On WebDAV sites, each save replaces the file on the server in one step, so it stays the same file. On Nextcloud and ownCloud, the file keeps its shares, links, comments and versions.
 
 ## The built-in editor
 

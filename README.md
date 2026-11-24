@@ -6,7 +6,7 @@
 
 Pick a saved site, double-click a file, edit it in the built-in editor or VS Code, and every save goes straight back to the server.
 
-Sluice connects over SFTP, SCP, FTP and FTPS. WebDAV and S3 are to come.
+Sluice connects over SFTP, SCP, FTP, FTPS and WebDAV. S3 is to come.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/main-window-dark.png">

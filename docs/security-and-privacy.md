@@ -28,12 +28,14 @@ Here **Cancel** is the default, and Return always cancels. To trust the new key,
 
 By default, keys you already trust in `~/.ssh/known_hosts` count too, so a server you've already connected to with `ssh`, at the same address, doesn't ask again. To count only the keys you've trusted in Sluice, turn off **Also trust hosts in ~/.ssh/known_hosts** in Settings › Connections.
 
-## FTPS certificates
+## FTPS and HTTPS certificates
 
-FTPS sites, with **TLS, explicit** or **TLS, implicit**, are encrypted, and the server proves who it is with a certificate.
+FTPS sites, with **TLS, explicit** or **TLS, implicit**, and WebDAV sites with **HTTPS (recommended)**, are encrypted, and the server proves who it is with a certificate. Certificates work the same way for both.
 
 - A certificate your computer already trusts is accepted without a question.
 - With explicit TLS, Sluice requires the encryption. If the server won't encrypt the connection, Sluice doesn't connect. It never quietly drops to plain FTP.
+- Over HTTPS, Sluice never quietly drops to HTTP, and never follows a server that tries to send it to HTTP. See [Redirects (WebDAV)](#redirects-webdav).
+- For a WebDAV site, Sluice sends nothing, not even your password, until the certificate has been accepted.
 
 ### When a certificate can't be verified
 
@@ -66,9 +68,29 @@ For a saved site, Sluice asks the first time it connects, and asks again if you 
 
 While you're connected, the status bar shows an open lock and "FTP (not encrypted)".
 
+## Plain HTTP (WebDAV)
+
+A WebDAV site with **HTTP (not encrypted)** is like plain FTP: your password and files are sent unencrypted, so anyone on the network between you and the server can read them. Use it only for servers that offer nothing else, on a network you trust.
+
+Before such a site sends anything, Sluice asks the same question as for plain FTP, **This connection isn't encrypted**, with **Cancel** and **Connect**. It asks at the same times: the first time a saved site connects, again if you change the site's host or port, and every time with **Connect without saving**.
+
+While you're connected, the status bar shows an open lock and "WebDAV (not encrypted)". Over HTTPS, it shows a closed lock and "WebDAV".
+
+## Redirects (WebDAV)
+
+A WebDAV server can answer with a redirect, which sends Sluice to another address. Sluice follows a redirect only when it stays on the same server: the same host and port, and still HTTPS, or still HTTP. It follows up to five of those in a row.
+
+Sluice never silently follows a redirect anywhere else. It stops, and says where the server tried to send it:
+
+- to another server, or another port, it says "The server tried to send Sluice to …, another address. If that's the right one, put it in this site's settings.";
+- from HTTPS to HTTP, it says "The server tried to send Sluice to …, which isn't encrypted, so Sluice stopped.";
+- from HTTP to HTTPS on the same server, it says "The server sends Sluice to …, its encrypted address. Choose HTTPS (recommended) for this site.".
+
+[Troubleshooting](troubleshooting.md#webdav-redirects) says what to do about each.
+
 ## Allow older encryption
 
-Some older servers and devices offer only older encryption: older SSH methods for SFTP and SCP, or TLS 1.0 and 1.1 for FTPS. Sluice doesn't use these unless you turn on **Allow older encryption** in that site's settings.
+Some older servers and devices offer only older encryption: older SSH methods for SFTP and SCP, or TLS 1.0 and 1.1 for FTPS and for WebDAV over HTTPS. Sluice doesn't use these unless you turn on **Allow older encryption** in that site's settings.
 
 These older methods are weaker, so turn it on only for a site that needs it. It's set for each site, so your other sites aren't affected. A few of the very oldest methods can't be used at all. When a server offers only those, Sluice says "This server only offers encryption that's too old for Sluice to use."
 

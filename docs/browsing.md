@@ -47,7 +47,7 @@ A terminal or a search can have a tab of its own too. See [Terminal and Find](te
 | Terminal | Open a terminal in this folder, in the bottom panel. |
 | Sites… | Show the Sites tab. |
 
-A button is greyed out when it can't be used, such as Rename with more than one item selected. On FTP sites, Terminal is always greyed out, because FTP has no terminal.
+A button is greyed out when it can't be used, such as Rename with more than one item selected. On FTP and WebDAV sites, Terminal is always greyed out. Hover over it to see why: "FTP has no terminal." or "WebDAV has no terminal."
 
 ## The path bar
 
@@ -66,6 +66,8 @@ Drag the divider between the tree and the file list to make the tree wider or na
 ## The file list
 
 The file list shows what's in the folder, folders first. Its columns are **Name**, **Size**, **Modified**, **Rights** and **Owner**. A `..` row at the top goes up a folder when you double-click it.
+
+On WebDAV sites, the **Rights** and **Owner** columns are empty, because WebDAV has no permissions or owners.
 
 - Double-click a folder to open it.
 - Double-click a file to edit it. See [Editing files](editing.md).
@@ -106,6 +108,8 @@ Right-click an item, or the empty space in the list, for:
 - **Rename** asks for the new name.
 - **Delete** asks first, because a server has no Trash: "It'll be removed from user@host permanently. This can't be undone." **Cancel** is the default, so Return cancels. Deleting a folder deletes everything in it. The delete shows in the transfer panel while it runs.
 
+On WebDAV sites, deleting a folder is one step: the server removes the folder and everything in it at once. On Nextcloud, the folder goes to Nextcloud's trash as one item, with everything in it.
+
 A name can't be empty, can't contain "/", and can't be "." or "..".
 
 ## Properties and permissions
@@ -115,6 +119,8 @@ A name can't be empty, can't contain "/", and can't be "." or "..".
 For a folder, tick **Apply to everything inside** to change everything in it too. Files inside lose their setuid and setgid bits; folders keep theirs.
 
 Some servers don't allow changing permissions. Properties then says "This server doesn't allow changing permissions." Over FTP, permissions can be changed only where the server supports `SITE CHMOD`.
+
+WebDAV has no permissions. On WebDAV sites, Properties shows the permissions greyed out, and says "WebDAV has no permissions."
 
 ## Hidden files
 
@@ -126,6 +132,7 @@ On the left, the status bar shows how this tab reaches the server, behind a lock
 
 - `SFTP`, `SCP`, or `SCP (no SFTP here)` for an SFTP site whose server has no SFTP;
 - `FTPS`, or `FTP (not encrypted)` behind an open lock for an FTP site with no encryption;
+- `WebDAV`, or `WebDAV (not encrypted)` behind an open lock for a WebDAV site over HTTP;
 - then **Connecting…**, **Connected**, **Reconnecting…** or **Disconnected**.
 
 On the right, it shows how much of the folder is selected, such as "2 of 6 selected, 34 KB". When the bottom panel is hidden and has something to show, **Show transfers** brings it back, with a summary such as "2 running · 1 waiting".

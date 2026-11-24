@@ -14,7 +14,7 @@ A terminal opens on the server you're browsing, already logged in, in the folder
 - Choose File › Open Terminal in New Tab to open one in a tab of its own.
 - Right-click a folder, or the empty space in the file list, and choose **Open terminal here**.
 
-Terminals work on SFTP and SCP sites. FTP has no terminal, so on FTP sites the Terminal button is greyed out.
+Terminals work on SFTP and SCP sites. FTP and WebDAV have no terminal, so on their sites the Terminal button is greyed out. Hover over it to see why: "FTP has no terminal." or "WebDAV has no terminal."
 
 You can have up to four terminals on each server. The first is named after the site, and the next ones are numbered, such as "My shop 2". The terminal's header shows `user@host` and the folder it started in.
 

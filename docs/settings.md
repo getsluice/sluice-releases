@@ -45,4 +45,4 @@ Connection settings count from the next connection, or the next check of a serve
 
 ## Settings for each site
 
-Some settings belong to a site rather than to Sluice: the protocol, the encryption, **Allow older encryption**, how you log in, and the folder to open. They're in the site's form on the Sites tab. See [Sites](sites.md).
+Some settings belong to a site rather than to Sluice: the protocol, the encryption, the server path for WebDAV, **Allow older encryption**, how you log in, and the folder to open. They're in the site's form on the Sites tab. See [Sites](sites.md).

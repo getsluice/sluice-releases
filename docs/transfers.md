@@ -9,6 +9,8 @@ Uploads go into the folder the file list shows.
 - Drag files or folders from Finder onto the file list.
 - Or choose **Upload** on the toolbar, File › Upload…, or **Upload…** in the right-click menu. A panel opens for you to choose files or folders. Pick them and choose **Upload**.
 
+On WebDAV sites, an uploaded file keeps its own modified time on Nextcloud and ownCloud. On other WebDAV servers, the server sets the file's time itself.
+
 ## Download
 
 Select the files and folders to download, then choose **Download** on the toolbar, File › Download…, or **Download…** in the right-click menu. A panel opens for you to choose the folder to download into.
@@ -64,13 +66,15 @@ Sluice runs up to three uploads and downloads at the same time. Change it in Set
 Each row has the buttons that fit its state.
 
 - **Pause** stops an upload or download that's running or waiting. Saves and deletes can't be paused.
-- **Resume** starts a paused transfer again. Over SFTP, and over FTP where the server supports it, a file continues from where it stopped. Over SCP, a file starts again from the beginning. A folder continues from the file it had got to.
+- **Resume** starts a paused transfer again. Over SFTP, and over FTP where the server supports it, a file continues from where it stopped. Over SCP, a file starts again from the beginning. Over WebDAV, an upload starts that file again from the beginning, and a download continues from where it stopped if the server supports it. A folder continues from the file it had got to.
 - **Retry** tries a failed transfer again, or one waiting for its connection, at once.
 - **Cancel** stops any transfer that hasn't finished.
 
 ## Safe uploads
 
 Where the server allows it, Sluice uploads each file to a temporary file in the same folder, then renames it into place in one step. That way the file on the server is never left half written.
+
+Over WebDAV, Sluice doesn't use a temporary file. It sends each file straight to its place, in one step, so a file you replace stays the same file. On Nextcloud and ownCloud, it keeps its shares, links, comments and versions.
 
 ## When the connection drops
 

@@ -37,7 +37,7 @@ You can come back to the Sites tab at any time:
 ## Make your first site
 
 1. Choose **New site**.
-2. Leave **Protocol** on **SFTP**, unless your server needs SCP or FTP. [Sites](sites.md) explains each choice.
+2. Leave **Protocol** on **SFTP**, unless your server needs SCP, FTP or WebDAV. [Sites](sites.md) explains each choice.
 3. In **Host**, type the server's address, such as `example.com`. **Port** is already 22, the usual port for SFTP.
 4. In **Username**, type the name you log in with.
 5. Leave **Log in with** on **Password**, and type your password. Leave **Save password** ticked to have Sluice remember it.
@@ -50,7 +50,7 @@ Connect saves the site, then connects. The form says "Connecting…" while it wa
 
 The first time you connect to an SFTP or SCP server, Sluice asks **Trust this server?** and shows the server's key fingerprint. Check that it matches the one your server shows, then choose **Trust and connect**. [Security and privacy](security-and-privacy.md) explains how to check it.
 
-FTPS servers whose certificate can't be verified, and FTP sites with no encryption, ask a question of their own the first time. Both are explained in [Security and privacy](security-and-privacy.md).
+FTPS and HTTPS servers whose certificate can't be verified, and FTP and WebDAV sites with no encryption, ask a question of their own the first time. Both are explained in [Security and privacy](security-and-privacy.md).
 
 ## Find your way around
 
