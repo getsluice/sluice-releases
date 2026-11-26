@@ -26,7 +26,7 @@ You can have up to four terminals on each server. The first is named after the s
 
 ### When the shell ends
 
-When you leave the shell, for example with `exit`, the header says "The session has ended." If the connection is lost, it says "The connection was lost." **Start Again** opens a new shell in the same folder, and **Close** closes the terminal.
+When you leave the shell, for example with `exit`, a box over the dimmed terminal says "The session has ended.", with **Start Again** and **Close**. If the connection is lost, it says "The connection was lost.", with **Reconnect** and **Close**. **Start Again** and **Reconnect** open a new shell in the same folder, and Return presses them. **Close** closes the terminal. In the bottom panel the box fits on one row. The terminal's text stays behind the box, so you can still scroll back and copy from it.
 
 A terminal stays open when you close the server's tab it came from, and keeps its connection open until you close it.
 
